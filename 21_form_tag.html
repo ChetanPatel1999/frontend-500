@@ -14,6 +14,8 @@
           using post we can send larg data in backend
           when you create registration form , login form
 
+  readonly :  we read input data but we can not change text in input field  and also data submit with form tag in backend        
+  disabled :- we read data but we can not change data and also not sub mite data with form .
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -27,10 +29,36 @@
 <body>
     <h3>Rgistration page :</h3>
     <form action="submit.html" method="get" target="_self" autocomplete="on">
-        Name: <input type="text" name="uname" > <br><br>
-        Father Name: <input type="text" name="fname"> <br><br>
-        Password: <input type="password" name="pass"> <br><br>
-        <input type="submit" value="register"> <input type="reset" value="clear">
+
+        <table>
+         <!-- <tr><th>Name : </th> <td><input type="text" name="uname" value="ram sharma" readonly disabled ></td></tr> -->
+         <tr><th>Name : </th> <td><input type="text" name="uname" placeholder="Enter your name" title="enter name" ></td></tr>
+         <tr><th>Father Name: </th> <td><input type="text" name="fname" placeholder="Enter Father name" ></td></tr>
+         <tr><th>Password:</th> <td><input type="password" name="pass" placeholder="Enter Password"></td></tr>
+         <tr><th>Mobile:</th> <td><input type="text" name="mobile" placeholder="Enter mobile Number"></td></tr>
+         <!-- type="radio" :- its make radio button inside form -->
+         <tr><th>Gender:</th> <td> Male<input type="radio" name="gen"  value="male">   Female <input type="radio" name="gen" value="female"> </td></tr>
+          <!--  type="checkbox"  :-  its make check box in form  -->
+         <tr><th>Hobbies:</th> <td> Cricket<input type="checkbox" name="hobbi"  value="cricket">  Football<input type="checkbox" name="hobbi"  value="football"> Running<input type="checkbox" name="hobbi"  value="running">   </td></tr>
+         <tr>
+            <th>Select State :  </th>
+          <!-- select tag is used to make dropdown list -->
+            <td>
+                 <select name="state">
+                   <option selected value="">---</option>
+                   <option value="madhaypradesh">MP</option>
+                   <option value="uttarPradesh">UP</option>
+                   <option >RJ</option>
+                   <option >MH</option>
+                 </select>
+            </td>
+        </tr>
+
+         <tr> <td></td> <td> <input type="submit" value="register"> <input type="reset" value="clear"></td></tr>
+         <!-- <tr> <td></td> <td> <button>register</button>  <input type="reset" value="clear"></td></tr> -->
+         <!-- <tr> <td></td> <td> <input onclick="alert('hello user kaise ho')" type="button" value="register">  <input type="reset" value="clear"></td></tr> -->
+        </table>
+   
     </form>
 </body>
 
