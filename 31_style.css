@@ -1,0 +1,43 @@
+ input {
+     display: block;
+     margin-bottom: 20px;
+     height: 30px;
+     width: 300px;
+     border-radius: 10px;
+     border: none;
+     border: 1px solid gray;
+ }
+
+ body {
+     background-color: lightblue;
+ }
+
+ label {
+     color: blue;
+     font-weight: bolder;
+     font-size: 20px;
+ }
+
+ form {
+     background-color: white;
+     width: fit-content;
+     padding: 20px;
+     border-radius: 30px;
+     margin-left: 500px;
+     margin-top: 50px;
+ }
+
+ #btn {
+     background-color: blue;
+     color: white;
+     font-weight: bolder;
+     height: 40px;
+     border: none;
+
+ }
+
+ #heading {
+     color: blue;
+     font-weight: bolder;
+     font-size: 22px;
+ }
