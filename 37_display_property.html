@@ -1,0 +1,79 @@
+<!-- 
+    display property :-   
+    block :  when we set block property so its take 100% width for element.and 
+             we take only one block element in one line.
+    inline:  when we set inline property so its take space only content width
+             but we can not set top and bottom margine of inline element 
+             and also not apply width and height property.     
+    inline block: its also same as inline element but here
+                  we can set top - and bottom margine.
+    none: this propery remove element from screen and element space
+           also remove.
+
+    
+   visibility: hidden 
+    when we use hidden so element remove from scrren
+    but elemen space is not remove.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            display: inline;
+            /* display: inline-block;  */
+            /* display: block;  */
+            margin-top: 300px;
+            margin-left: 100px;
+        }
+
+        a {
+            display: block;
+            margin-left: 40px;
+        }
+
+        div {
+            display: inline-block;
+            border: 2px solid red;
+            width: 200px;
+            height: 100px;
+            margin-top: 20px;
+
+        }
+
+        #box3 {
+            /* display: none; */
+            /* visibility: hidden; */
+            background-color: yellow;
+
+        }
+
+        #box1 {
+            background-color: red;
+        }
+
+        #box2 {
+            background-color: blue;
+            /* margin-left: -100px;
+            margin-top: 200px; */
+
+        }
+
+        #box4 {
+            background-color: magenta;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+    <div id="box3">box3</div>
+    <div id="box4">box4</div>
+</body>
+
+</html>
