@@ -76,7 +76,7 @@ z index : auto(0)
             background-color: red;
             width: 100px;
             height: 100px;
-            margin-left: 50px;
+            /* margin-left: 50px; */
         }
 
         #box2 {
@@ -112,6 +112,63 @@ z index : auto(0)
             left: -50;
             z-index: 10;
         }
+
+        #parent {
+            position: relative;
+            background-color: blue;
+            width: 700px;
+            height: 300px;
+            z-index: 15;
+            /* top: 100px; */
+            left: 100px;
+        }
+
+        #c1 {
+            background-color: orange;
+            height: 80px;
+            width: 80px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+
+        }
+
+        #c2 {
+            background-color: orange;
+            height: 80px;
+            width: 80px;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+
+        }
+
+        #c3 {
+            background-color: orange;
+            height: 80px;
+            width: 80px;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        #c4 {
+            background-color: orange;
+            height: 80px;
+            width: 80px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        #sticky {
+            background-color: yellow;
+            height: 80px;
+            width: 500px;
+            position: sticky;
+            bottom: 100px;
+            left: 100px;
+        }
     </style>
 </head>
 
@@ -140,7 +197,63 @@ z index : auto(0)
         dignissimos nemo. Deserunt hic laboriosam exercitationem molestias quo. Harum architecto molestias illum saepe
         fugiat ea deleniti corrupti, nostrum doloribus assumenda sunt maiores quam magni, eius impedit nihil nemo
         dolorum ex sint? Explicabo, ipsa.</p>
+
     <div id="box"></div>
+    <p>p1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis animi placeat temporibus possimus sint,
+        inventore, mollitia repudiandae non blanditiis porro voluptas officia exercitationem veritatis rerum nulla quo
+        error fugiat dolor, dicta repellendus earum qui a ab. Nam eaque animi officia voluptatibus distinctio voluptatem
+        rem aut voluptate asperiores assumenda? Ducimus veniam voluptatum debitis omnis aliquam, saepe quia tempora.
+        Commodi voluptatem eligendi facilis consequatur animi blanditiis cum ut consequuntur natus reiciendis expedita,
+        assumenda molestias nihil quasi vitae, minus illum impedit similique temporibus quisquam nesciunt iusto repellat
+        debitis labore. Blanditiis at rem molestiae totam asperiores vitae aliquam repellat odit aperiam sint provident
+        recusandae vero nobis, quaerat quisquam, accusantium, minima voluptates quo fugiat aspernatur. Eligendi
+        accusamus at, in, et beatae aperiam aliquid porro amet nulla, quis explicabo reprehenderit reiciendis ab. Quam
+        voluptatem accusamus nam qui ex, nulla corrupti, animi consequatur reprehenderit harum cupiditate eius
+        dignissimos, mollitia ipsam voluptas. Cupiditate, omnis quod unde amet perspiciatis dolorem eos pariatur
+        doloribus incidunt laudantium veritatis, deserunt quas ea hic optio voluptatem ipsum debitis repudiandae vero
+        dignissimos nemo. Deserunt hic laboriosam exercitationem molestias quo. Harum architecto molestias illum saepe
+        fugiat ea deleniti corrupti, nostrum doloribus assumenda sunt maiores quam magni, eius impedit nihil nemo
+        dolorum ex sint? Explicabo, ipsa.</p>
+    <div id="parent">
+        <h1>hello students</h1>
+        <div id="c1"></div>
+        <div id="c2"></div>
+        <div id="c3"></div>
+        <div id="c4"></div>
+    </div>
+    <p>p1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis animi placeat temporibus possimus sint,
+        inventore, mollitia repudiandae non blanditiis porro voluptas officia exercitationem veritatis rerum nulla quo
+        error fugiat dolor, dicta repellendus earum qui a ab. Nam eaque animi officia voluptatibus distinctio voluptatem
+        rem aut voluptate asperiores assumenda? Ducimus veniam voluptatum debitis omnis aliquam, saepe quia tempora.
+        Commodi voluptatem eligendi facilis consequatur animi blanditiis cum ut consequuntur natus reiciendis expedita,
+        assumenda molestias nihil quasi vitae, minus illum impedit similique temporibus quisquam nesciunt iusto repellat
+        debitis labore. Blanditiis at rem molestiae totam asperiores vitae aliquam repellat odit aperiam sint provident
+        recusandae vero nobis, quaerat quisquam, accusantium, minima voluptates quo fugiat aspernatur. Eligendi
+        accusamus at, in, et beatae aperiam aliquid porro amet nulla, quis explicabo reprehenderit reiciendis ab. Quam
+        voluptatem accusamus nam qui ex, nulla corrupti, animi consequatur reprehenderit harum cupiditate eius
+        dignissimos, mollitia ipsam voluptas. Cupiditate, omnis quod unde amet perspiciatis dolorem eos pariatur
+        doloribus incidunt laudantium veritatis, deserunt quas ea hic optio voluptatem ipsum debitis repudiandae vero
+        dignissimos nemo. Deserunt hic laboriosam exercitationem molestias quo. Harum architecto molestias illum saepe
+        fugiat ea deleniti corrupti, nostrum doloribus assumenda sunt maiores quam magni, eius impedit nihil nemo
+        dolorum ex sint? Explicabo, ipsa.</p>
+    <div id="sticky">
+
+    </div>
+    <p>p1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis animi placeat temporibus possimus sint,
+        inventore, mollitia repudiandae non blanditiis porro voluptas officia exercitationem veritatis rerum nulla quo
+        error fugiat dolor, dicta repellendus earum qui a ab. Nam eaque animi officia voluptatibus distinctio voluptatem
+        rem aut voluptate asperiores assumenda? Ducimus veniam voluptatum debitis omnis aliquam, saepe quia tempora.
+        Commodi voluptatem eligendi facilis consequatur animi blanditiis cum ut consequuntur natus reiciendis expedita,
+        assumenda molestias nihil quasi vitae, minus illum impedit similique temporibus quisquam nesciunt iusto repellat
+        debitis labore. Blanditiis at rem molestiae totam asperiores vitae aliquam repellat odit aperiam sint provident
+        recusandae vero nobis, quaerat quisquam, accusantium, minima voluptates quo fugiat aspernatur. Eligendi
+        accusamus at, in, et beatae aperiam aliquid porro amet nulla, quis explicabo reprehenderit reiciendis ab. Quam
+        voluptatem accusamus nam qui ex, nulla corrupti, animi consequatur reprehenderit harum cupiditate eius
+        dignissimos, mollitia ipsam voluptas. Cupiditate, omnis quod unde amet perspiciatis dolorem eos pariatur
+        doloribus incidunt laudantium veritatis, deserunt quas ea hic optio voluptatem ipsum debitis repudiandae vero
+        dignissimos nemo. Deserunt hic laboriosam exercitationem molestias quo. Harum architecto molestias illum saepe
+        fugiat ea deleniti corrupti, nostrum doloribus assumenda sunt maiores quam magni, eius impedit nihil nemo
+        dolorum ex sint? Explicabo, ipsa.</p>
     <p>p1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis animi placeat temporibus possimus sint,
         inventore, mollitia repudiandae non blanditiis porro voluptas officia exercitationem veritatis rerum nulla quo
         error fugiat dolor, dicta repellendus earum qui a ab. Nam eaque animi officia voluptatibus distinctio voluptatem
