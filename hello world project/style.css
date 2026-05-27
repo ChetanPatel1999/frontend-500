@@ -5,9 +5,17 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .nav-bar {
     background-color: black;
     padding: 20px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
 }
 
 .nav-bar ul {
@@ -137,7 +145,7 @@
     background-color: lightblue;
     padding: 25px;
     border-radius: 20px;
-    transition: 0.5s;
+    transition: all 0.5s;
 }
 
 .card:hover {
@@ -145,9 +153,96 @@
     transform: translateY(-10px);
 }
 
-.card h1 {}
-
 .card p {
     margin-top: 20px;
     font-size: 18px;
+}
+
+.contact {
+    padding: 100px 50px 50px 100px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.contact input {
+    display: block;
+    width: 60%;
+    height: 50px;
+    margin-top: 20px;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.contact textarea {
+    display: block;
+    width: 60%;
+    /* height: 50px; */
+    margin-top: 20px;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.contact button {
+    margin-top: 25px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    background-color: orange;
+    transition: 0.5s;
+}
+
+.contact button:hover {
+    background-color: red;
+    color: white;
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #808080;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* responsive for mobile */
+@media (max-width:500px) {
+    .nav-bar ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero {
+        padding-top: 150px;
+    }
+
+    .about {
+        padding-top: 230px;
+    }
+
+    .courses {
+        padding-top: 230px;
+    }
+
+    .contact {
+        padding-top: 230px;
+    }
+
+    .contact input,
+    .contact textarea {
+        width: 100%;
+    }
+
 }
