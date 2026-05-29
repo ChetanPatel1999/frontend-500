@@ -65,7 +65,13 @@
 
 .nav-search {
     display: flex;
-    width: 700px;
+    width: 800px;
+    border: 2px solid transparent;
+}
+
+.nav-search:hover {
+    border: 2px solid rgb(241, 178, 60);
+    border-radius: 10px;
 }
 
 .search-select {
@@ -107,4 +113,96 @@
 .search-icon i {
     color: #0f1111;
     font-size: 1.2rem;
+}
+
+.nav-sign-box {
+    padding-left: 5px;
+    height: 50px;
+    width: 120px;
+    color: white;
+}
+
+.nav-sign-box p {
+    margin-top: 10px;
+    font-size: 0.75rem;
+}
+
+.nav-sign-box h4 {
+    font-size: 0.85rem;
+}
+
+.nav-cart {
+    padding-top: 10px;
+    height: 50px;
+    width: 80px;
+    color: white;
+    font-weight: 800;
+    font-size: 0.75rem;
+}
+
+.nav-cart i {
+    font-size: 1.5rem;
+}
+
+.panle {
+    height: 40px;
+    background-color: rgb(51, 48, 72);
+    display: flex;
+    color: white;
+    gap: 10px;
+    padding-left: 10px;
+    align-items: center;
+}
+
+.panle p {
+    font-weight: 500;
+    height: 40px;
+    padding: 10px 5px 0px 5px;
+    font-size: 0.85rem;
+    border: 1px solid transparent;
+}
+
+.panle p:hover {
+    border-color: white;
+}
+
+.panle-icon {
+    padding: 10px 5px 0px 5px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.panle-icon i {
+    font-size: 1.1rem;
+}
+
+.hero {
+    height: 300px;
+    background-image: url(images/hero.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 20px;
+}
+
+.hero-para {
+    text-align: center;
+    background-color: white;
+    padding: 12px;
+    width: 97%;
+}
+
+.hero-para p {
+    font-size: 0.85rem;
+}
+
+.hero-para p a {
+    color: #2162a1;
+}
+
+.hero-para p a:hover {
+    text-decoration: 1px solid underline;
+    cursor:pointer;
 }
