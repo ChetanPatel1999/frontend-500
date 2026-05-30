@@ -204,5 +204,84 @@
 
 .hero-para p a:hover {
     text-decoration: 1px solid underline;
-    cursor:pointer;
+    cursor: pointer;
+}
+
+.product-container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #ff632a;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.product {
+    /* border: 2px solid black; */
+    height: 400px;
+    width: 23%;
+    background-color: white;
+    padding: 20px;
+}
+
+.image-box {
+    height: 280px;
+    background-size: cover;
+    background-position: center
+}
+
+.product h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.product a {
+    margin-top: 20px;
+    display: inline-block;
+    color: #2162a1;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.p1 {
+    background-color: #37475a;
+    text-align: center;
+    color: white;
+    padding: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.p2 {
+    background-color: #212a36;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 0px 50px 0px;
+}
+
+.p2-box p {
+    color: #dddddd;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    transition: 0.5s;
+}
+
+.p2-box h3 {
+    color: white;
+    font-size: 1rem;
+}
+
+.p2-box p:hover {
+    text-decoration: 1px solid underline;
+    cursor: pointer;
+}
+
+.p3 {
+    border-top: 1px solid #635454;
+    background-color: #212a36;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
