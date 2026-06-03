@@ -285,3 +285,26 @@
     justify-content: center;
     align-items: center;
 }
+
+.p4 {
+    padding: 20px 0px;
+    background-color: #0f1111;
+    color: #dddddd;
+    text-align: center;
+}
+
+.p4 p,
+.p4 a {
+    font-size: 0.75rem;
+    margin-top: 5px;
+}
+
+.p4 a {
+    margin-left: 10px;
+    transition: 0.5s;
+}
+
+.p4 a:hover {
+    text-decoration: 1px solid underline white;
+    cursor: pointer;
+}
