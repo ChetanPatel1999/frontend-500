@@ -208,7 +208,7 @@
 }
 
 .product-container {
-    padding-top: 20px;
+    padding: 20px 0px;
     display: flex;
     justify-content: space-evenly;
     background-color: #ff632a;
