@@ -1,0 +1,32 @@
+<!-- 
+for/of - loops through the values of an iterable object 
+         its used to iterate string,array .
+for/in - loops through the properties/keys of an object
+         its used object which store data in key /value paire
+-->
+<!-- <script>
+    let a = [12, 9, 5, 7, 8];
+    console.log(a)
+    console.log(a[0])
+    console.log(a[1])
+    console.log(a[2])
+</script> -->
+
+<!-- <script>
+    let list = [12, 9, 5, 7, 8];
+    for (let num of list) {
+        console.log(num);
+    }
+</script> -->
+
+<script>
+    const student = {
+        name: "ram",
+        rno: 101,
+        per: 89.34
+    }
+
+    for (let key in student) {
+        console.log(key, " = ", student[key])
+    }
+</script>
