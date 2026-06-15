@@ -18,7 +18,7 @@ for/in - loops through the properties/keys of an object
         console.log(num);
     }
 </script> -->
-
+<!-- 
 <script>
     const student = {
         name: "ram",
@@ -28,5 +28,75 @@ for/in - loops through the properties/keys of an object
 
     for (let key in student) {
         console.log(key, " = ", student[key])
+    }
+</script> -->
+
+<!-- <script>
+    let marks = [80, 50, 30, 70, 90]
+    console.log(marks[0])
+    console.log(marks[1])
+    console.log(marks[2])
+    console.log(marks[3])
+    console.log(marks[4])
+</script> -->
+
+<!-- <script>
+    let marks = [80, 50, 30, 70, 90]
+    for (let num of marks) {
+        console.log("hello bachho", num)
+    }
+</script> -->
+
+<!-- <script>
+    //wap to print square of array elements.
+    let marks = [8, 5, 3, 7, 9]
+    console.log(marks)
+    for (let num of marks) {
+        console.log(num + " = " + num * num)
+    }
+</script> -->
+<!-- 
+<script>
+    //wap to print sum of array element.
+    let marks = [8, 5, 3, 7, 9]
+    console.log(marks)
+    let sum = 0;
+    for (let num of marks) {
+        sum = sum + num;
+    }
+    console.log("sum of array element = " + sum)
+</script> -->
+
+
+<!-- visit string using for of loop -->
+<!-- <script>
+    let name = "ravi mishra";
+    console.log(name);
+    for (let ch of name) {
+        console.log(ch)
+    }
+</script> -->
+
+<script>
+    let person = {
+        name: "bhuvan",
+        age: 34,
+        height: 5.6,
+        city: "indore",
+        mobile: "7986798787"
+    };
+
+    // console.log(person["name"])
+    // console.log(person.age)
+
+    // for (let key in person) {
+    //     console.log(key)
+    // }
+
+    // for (let key in person) {
+    //     console.log(key, " = ", person[key])
+    // }
+    for (let key in person) {
+        console.log(`my ${key} is ${person[key]}`)
     }
 </script>
