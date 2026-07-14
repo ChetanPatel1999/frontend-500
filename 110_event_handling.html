@@ -1,0 +1,143 @@
+<!-- 
+What is an Event in JavaScript?
+An event is an action or occurrence that happens in the browser, which JavaScript can respond to.
+👉 Events are things like:
+A user clicking a button
+A webpage loading
+A key being pressed on the keyboard
+A mouse hovering over an element
+A form being submitted
+In short:
+An event is something that happens, and event handling is how your code reacts to it.   
+
+What is Event Handling?
+Event Handling means writing JavaScript code that runs when a specific event occurs.
+You can think of it like this:
+“When this happens → do that.”
+For example:
+When the user clicks a button → show a message.
+
+Real-Life Example
+Imagine a doorbell:
+Event → Someone presses the bell.
+Event Handler → The bell rings.
+Similarly, in a web page:
+Event → A user clicks a button.
+Event Handler → A JavaScript function runs and displays a message.
+
+📋 Commonly Used JavaScript Events
+
+Event Name	         Description	                      Example Use
+
+onclick	             when element is clicked	          Button click
+ondblclick	         Double-click on element	          Zoom or open action
+onmouseover	         Mouse moves over element	          Highlight or tooltip
+onmouseout	         Mouse leaves element	              Remove highlight
+onfocus	             Element gets focus	                  Highlight input
+onblur	             Element loses focus	              Remove highlight
+onkeydown	         Key is pressed down	              Detect key press
+onkeyup	             Key is released	                  Input validation
+onchange	         Value of input                       changes	Dropdown or form
+onload	             Page finishes loading	              Initialize app
+onsubmit	         Form is submitted	                  Validate form
+oninput	             While typing in input	              Live search or feedback
+onmouseup            mouse left/right btn realeased
+onmousedown          mouse left,right btn presed
+<!-- 
+What is an Event in JavaScript?
+An event is an action or occurrence that happens in the browser, which JavaScript can respond to.
+👉 Events are things like:
+A user clicking a button
+A webpage loading
+A key being pressed on the keyboard
+A mouse hovering over an element
+A form being submitted
+In short:
+An event is something that happens, and event handling is how your code reacts to it.   
+
+What is Event Handling?
+Event Handling means writing JavaScript code that runs when a specific event occurs.
+You can think of it like this:
+“When this happens → do that.”
+For example:
+When the user clicks a button → show a message.
+
+Real-Life Example
+Imagine a doorbell:
+Event → Someone presses the bell.
+Event Handler → The bell rings.
+Similarly, in a web page:
+Event → A user clicks a button.
+Event Handler → A JavaScript function runs and displays a message.
+
+📋 Commonly Used JavaScript Events
+
+Event Name	         Description	                      Example Use
+
+onclick	             when element is clicked	          Button click
+ondblclick	         Double-click on element	          Zoom or open action
+onmouseover	         Mouse moves over element	          Highlight or tooltip
+onmouseout	         Mouse leaves element	              Remove highlight
+onfocus	             Element gets focus	                  Highlight input
+onblur	             Element loses focus	              Remove highlight
+onkeydown	         Key is pressed down	              Detect key press
+onkeyup	             Key is released	                  Input validation
+onchange	         Value of input                       changes	Dropdown or form
+onload	             Page finishes loading	              Initialize app
+onsubmit	         Form is submitted	                  Validate form
+oninput	             While typing in input	              Live search or feedback
+onmouseup            mouse left/right btn realeased
+onmousedown          mouse left,right btn presed
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 100px;
+            border: 2px solid blue;
+            border-radius: 20px;
+            background-color: blue;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h3>Thanks for open!</h3>
+    </div>
+    <button id="btn">click me!</button>
+    <script>
+        window.onload = () => {
+            let box = document.querySelector(".box");
+            setTimeout(() => {
+                box.style.display = "none";
+            }, 2000)
+        }
+
+        btn.onmousedown = () => {
+            btn.style.backgroundColor = "red";
+            console.log("mouse is down");
+        }
+
+        btn.onmouseup = () => {
+            btn.style.backgroundColor = "white";
+            console.log("mouse is up");
+        }
+    </script>
+</body>
+
+</html>
