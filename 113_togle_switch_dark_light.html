@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .light {
+            background-color: white;
+            color: black;
+        }
+
+        .dark {
+            background-color: black;
+            color: white;
+        }
+
+        .box {
+            border: 1px solid black;
+            width: 500px;
+            height: 100px;
+            border-radius: 20px;
+            padding-left: 20px;
+        }
+
+        .box h3 {
+            font-weight: 300;
+            margin-bottom: 0px;
+        }
+
+        .box select {
+            width: 150px;
+        }
+
+        .select-light {
+            background-color: white;
+            color: black;
+            padding: 10px;
+        }
+
+        .select-dark {
+            background-color: rgb(23, 22, 22);
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body class="light">
+    <div class="box">
+        <h3>Theme :</h3>
+        <select class="select-light">
+            <option>Light</option>
+            <option>Dark</option>
+        </select>
+    </div>
+    <h1>hello world institue</h1>
+    <h3>course details :- </h3>
+    <ol>
+        <li>Java</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>javaScript</li>
+    </ol>
+    <p>for more details contact :- 8085896740</p>
+    <button class="select-light" id="btn">Change Theme</button>
+    <script>
+        let btn = document.querySelector("#btn");
+        let body = document.querySelector("body");
+        let theme = "light";
+        let select = document.querySelector(".box select");
+        btn.addEventListener("click", () => {
+            //first way to chnage theme
+            // if (body.classList.contains("light")) {
+            //     body.classList.add("dark");
+            //     body.classList.remove("light");
+            // }
+            // else {
+            //     body.classList.add("light");
+            //     body.classList.remove("dark");
+            // }
+
+            //second way two chnage theme
+
+            if (theme == "light") {
+                body.classList.add("dark");
+                body.classList.remove("light");
+                select.setAttribute("class", "select-dark")
+                btn.setAttribute("class", "select-dark")
+                theme = "dark";
+            }
+            else {
+                body.classList.add("light");
+                body.classList.remove("dark");
+                select.setAttribute("class", "select-light")
+                btn.setAttribute("class", "select-light")
+                theme = "light";
+            }
+        })
+
+        select.addEventListener("change", (evt) => {
+            let theme = evt.target.value;  //light
+            console.log(theme)
+            if (theme == "Light") {
+                console.log(theme)
+                body.classList.add("light");
+                body.classList.remove("dark");
+                select.setAttribute("class", "select-light")
+                btn.setAttribute("class", "select-light")
+            }
+            else {
+                console.log(theme)
+                body.classList.add("dark");
+                body.classList.remove("light");
+                select.setAttribute("class", "select-dark")
+                btn.setAttribute("class", "select-dark")
+            }
+
+        })
+    </script>
+</body>
+
+</html>
