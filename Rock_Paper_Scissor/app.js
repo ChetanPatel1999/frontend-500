@@ -4,31 +4,35 @@ let userScore = document.querySelector("#user-score")
 let compScore = document.querySelector("#comp-score")
 let result = document.querySelector("#result")
 
-divs.forEach((div) => {
-    div.addEventListener("click", (evt) => {
-        let userInput = evt.currentTarget.id;
-        console.log("userInput = ", userInput)
-        let comInput = getCompInput();
-        console.log("compInput = ", comInput)
-        let winner = getWinner(userInput, comInput)
-        console.log(winner);
-        if (winner == "Match is draw") {
-            result.innerHTML = winner;
-            result.style.backgroundColor = "blue";
-        }
-        else if (winner == "Computer winner!") {
-            result.innerHTML = winner;
-            result.style.backgroundColor = "red";
-            compScore.innerHTML = Number(compScore.innerHTML) + 1;
-        }
-        else {
-            result.innerHTML = winner;
-            result.style.backgroundColor = "green";
-            userScore.innerHTML = Number(userScore.innerHTML) + 1;
-        }
 
-    })
+const startGame = (evt) => {
+    let userInput = evt.currentTarget.id;
+    console.log("userInput = ", userInput)
+    let comInput = getCompInput();
+    console.log("compInput = ", comInput)
+    let winner = getWinner(userInput, comInput)
+    console.log(winner);
+    if (winner == "Match is draw") {
+        result.innerHTML = winner;
+        result.style.backgroundColor = "blue";
+    }
+    else if (winner == "Computer winner!") {
+        result.innerHTML = winner;
+        result.style.backgroundColor = "red";
+        compScore.innerHTML = Number(compScore.innerHTML) + 1;
+    }
+    else {
+        result.innerHTML = winner;
+        result.style.backgroundColor = "green";
+        userScore.innerHTML = Number(userScore.innerHTML) + 1;
+    }
+
+}
+
+divs.forEach((div) => {
+    div.addEventListener("click", startGame)
 })
+
 
 function getCompInput() {
     let list = ["rock", "paper", "scissor"]
