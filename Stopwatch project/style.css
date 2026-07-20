@@ -17,11 +17,18 @@ body {
 }
 
 .timer-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: black;
     color: white;
-    padding: 20px;
+    width: 500px;
+    height: 150px;
     border-radius: 20px;
-    font-size: 40px;
+}
+
+.timer {
+    font-size: 80px;
 }
 
 .btn-box {
@@ -42,6 +49,22 @@ body {
     font-weight: 600;
 }
 
-#stop {
-    background-color: red;
+#reset {
+    visibility: hidden;
+    background-color: blue;
+}
+
+#lap {
+    visibility: hidden;
+    background-color: rgb(38, 167, 167);
+}
+
+.div-box {
+    color: black;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
 }
