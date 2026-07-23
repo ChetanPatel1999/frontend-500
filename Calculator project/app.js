@@ -34,7 +34,6 @@ const btnHandler = (inputValue) => {
                         newstr = newstr + str[i];
                     }
                 }
-                console.log(newstr)
                 str = newstr;
                 inputBox.value = str;
             }
@@ -57,4 +56,23 @@ btns.forEach((btn) => {
         btnHandler(inputValue);
     })
 })
+
+document.onkeydown = (evt) => {
+    console.log(evt.key)
+    if (evt.key >= '0' && evt.key <= '9') {
+        btnHandler(evt.key)
+    }
+    else if (evt.key == '+' || evt.key == '-' || evt.key == '*' || evt.key == '/' || evt.key == '%' || evt.key == '.') {
+        btnHandler(evt.key);
+    }
+    else if (evt.key == 'Enter') {
+        btnHandler("=");
+    }
+    else if (evt.key == "Backspace") {
+        btnHandler("DEL")
+    }
+    else if (evt.key == "Escape") {
+        btnHandler("AC")
+    }
+}
 
