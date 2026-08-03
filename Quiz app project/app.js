@@ -50,8 +50,22 @@ const myQuestions = [
     }
 ];
 
+
+// n = Number(prompt("enter how number of quize you want assign : "))
+// for (let i = 0; i < n; i++) {
+//     ques = prompt(`enter question ${i + 1} : `)
+//     let ans = []
+//     for (let j = 0; j < 4; j++) {
+//         op = prompt(`enter op ${j + 1} : `)
+//         cr = Boolean(prompt(`enter ture or false: `))
+//         ans.push({ text: op, correct: cr })
+//     }
+//     myQuestions.push({ question: ques, answer: ans })
+// }
+
+
 let question = document.querySelector("#question");
-let answerBtns = document.querySelectorAll(".btn");
+let answerBtns = document.querySelector(".answer-btns");
 let nextBtn = document.querySelector("#next-btn");
 
 let score = 0;
@@ -60,11 +74,73 @@ let currentQuestionIndex = 0;
 function startQuiz() {
     score = 0;
     currentQuestionIndex = 0;
+    nextBtn.style.display = "none";
+    nextBtn.innerHTML = "Next";
     showQuestions();
 }
 function showQuestions() {
+    resetButtons();
     let currentQuestion = myQuestions[currentQuestionIndex];
-    question.innerHTML = currentQuestion.question;
+    question.innerHTML = (currentQuestionIndex + 1) + ". " + currentQuestion.question;
+    currentQuestion.answer.forEach((ans) => {
+        let btn = document.createElement("button");
+        btn.innerText = ans.text;
+        btn.classList.add("btn");
+        answerBtns.append(btn);
+        btn.addEventListener("click", selectAnswer)
+        if (ans.correct == true) {
+            btn.dataset.correct = ans.correct;
+        }
+    })
 }
+function resetButtons() {
+    // answerBtns.innerHTML=""
+
+    while (answerBtns.firstElementChild) {
+        answerBtns.firstElementChild.remove();
+    }
+}
+
+function selectAnswer(evt) {
+    let correct = evt.target.dataset.correct;
+    console.log(typeof correct)
+    if (correct == "true") {
+        evt.target.classList.add("correct");
+        score++;
+    }
+    else {
+        evt.target.classList.add("in-correct");
+    }
+
+    Array.from(answerBtns.children).forEach((bt) => {
+        if (bt.dataset.correct == "true") {
+            bt.classList.add("correct");
+        }
+        bt.disabled = true;
+    })
+    nextBtn.style.display = "block";
+}
+
+function showResult() {
+    resetButtons();
+    question.innerHTML = `you scored ${score} out of ${myQuestions.length}!`
+    nextBtn.innerHTML = "play again";
+    nextBtn.style.display = "block";
+}
+
+nextBtn.addEventListener("click", () => {
+    nextBtn.style.display = "none";
+    currentQuestionIndex++; //6
+    if (currentQuestionIndex < myQuestions.length) {
+        showQuestions()
+    }
+    else if (currentQuestionIndex == myQuestions.length + 1) {
+        startQuiz();
+    }
+    else {
+        showResult();
+    }
+})
+
 startQuiz()
 
