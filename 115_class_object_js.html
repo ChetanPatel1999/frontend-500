@@ -1,0 +1,47 @@
+<script>
+    class student {
+        setStudent(name, age, per) {
+            this.name = name;
+            this.age = age;
+            this.per = per;
+        }
+        displayStudent() {
+            console.log("student info : ");
+            console.log("name : ", this.name)
+            console.log("age : ", this.age)
+            console.log("per : ", this.per)
+
+        }
+
+        result() {
+            if (this.per >= 33) {
+                console.log("student pass")
+            }
+            else {
+                console.log("student fail")
+            }
+            console.log("------------------")
+        }
+    }
+
+
+    s1 = new student()
+    s1.setStudent("ram", 34, 67);
+    s1.displayStudent();
+    s1.result()
+
+    s2 = new student()
+    s2.setStudent("ravi", 35, 20);
+    s2.displayStudent();
+    s2.result()
+
+
+
+    s3 = new student()
+    s3.setStudent("prohit", 37, 10);
+    s3.displayStudent()
+    s3.result()
+
+
+
+</script>
