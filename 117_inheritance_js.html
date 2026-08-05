@@ -1,0 +1,50 @@
+<script>
+    // inheritance
+    class student {
+        setStudent(name, fees) {
+            this.name = name
+            this.fees = fees
+        }
+        getStudent() {
+            console.log("student info : ")
+            console.log("name : ", this.name)
+            console.log("fees : ", this.fees)
+        }
+    }
+
+    class engStudent extends student {
+        setBranch(branch) {
+            this.branch = branch
+        }
+        getBranch() {
+            console.log("branch : ", this.branch)
+            console.log("----------------------")
+        }
+    }
+
+    class mediStudent extends student {
+        setSpeci(speci) {
+            this.speci = speci
+        }
+        getSpeci() {
+            console.log("speci : ", this.speci)
+            console.log("----------------------")
+        }
+    }
+
+
+    s1 = new engStudent()
+    s1.setStudent("ravi sisodiya", 12000)
+    s1.setBranch("CS")
+    s1.getStudent()
+    s1.getBranch()
+
+
+
+    s2 = new mediStudent()
+    s2.setStudent("prohit dongre", 120000)
+    s2.setSpeci("Artho")
+    s2.getStudent()
+    s2.getSpeci()
+
+</script>

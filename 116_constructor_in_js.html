@@ -1,0 +1,46 @@
+<!-- <script>
+    //example of constructor
+
+    class demo {
+        constructor() {
+            console.log("hello i am constructor");
+        }
+        display() {
+            console.log("hello i am display");
+        }
+    }
+
+    d1 = new demo()
+    d1.display()
+
+</script> -->
+<script>
+    class InstaUser {
+        constructor(post, following, follower) {
+            this.post = post
+            this.following = following
+            this.follower = follower
+        }
+        getUser() {
+            console.log("insta user info : ")
+            console.log("post : " + this.post)
+            console.log("following : " + this.following)
+            console.log("follower : " + this.follower)
+            console.log("-----------------------")
+        }
+        get_diff_folower_followings() {
+            console.log("difference : " + (this.follower - this.following))
+        }
+    }
+
+    prohit = new InstaUser(120, 40, 286);
+    prohit.getUser()
+    prohit.get_diff_folower_followings()
+    console.log("-----------------------")
+
+    ravi = new InstaUser(1000, 45, 200);
+    ravi.getUser()
+    ravi.get_diff_folower_followings()
+    console.log("-----------------------")
+
+</script>
