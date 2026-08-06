@@ -1,0 +1,29 @@
+<!-- 
+ callback function :-  when we pass a function as a argument in other function callling
+                        so that function is called callback function.
+                        its pass as argument and after that call back by other function in which we pass,
+                        so that,s why its called callback function.
+-->
+<script>
+
+    function add(a, b) {
+        console.log("sum = ", (a + b));
+    }
+
+    function calculator(a, b, fn) {
+        fn(a, b);
+    }
+
+    const sub = (a, b) => {
+        console.log("sab = ", (a - b));
+    }
+
+    calculator(120, 20, add);
+
+    calculator(20, 5, (a, b) => {
+        console.log("mul = ", (a * b));
+    });
+
+    calculator(45, 7, sub);
+
+</script>
