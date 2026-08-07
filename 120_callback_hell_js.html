@@ -6,6 +6,50 @@
     // This style of programming becomes difficult to understand & manage.
     // we want to access some data from data base but sequence by squence. 
 -->
-<script>
+<!-- <script>
+    function getData(id) {
+        setTimeout(() => {
+            console.log("get data :" + id)
+        }, 2000)
+    }
+
+
+    console.log("getting data ....")
+    getData(101);
+    getData(102);
+    getData(103);
     
+</script> -->
+
+<!--  -->
+
+<script>
+    function getData(id, getNextData) {
+        setTimeout(() => {
+            console.log("get data :" + id)
+            if (getNextData) {
+                getNextData();
+            }
+        }, 2000)
+    }
+
+    console.log("getting data1 ....")
+    getData(101, () => {
+        console.log("getting data2 ....")
+        getData(102, () => {
+            console.log("getting data3 ....")
+            getData(103, () => {
+                console.log("getting data4 ....")
+                getData(104, () => {
+                    console.log("getting data5 ....")
+                    getData(105)
+                })
+            })
+        })
+    });
+
+
+
+
+
 </script>
