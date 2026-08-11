@@ -34,11 +34,55 @@ promise.catch( ( err ) ) => { .... } )
 -->
 <script>
 
-    let promise = new Promise((resolve, reject) => {
-        console.log("hi i am promise")
-        // resolve("data fatched")
-        // reject("some error")
-    });
+    // let promise = new Promise((resolve, reject) => {
+    //     console.log("i am promise");
+    //     // resolve("data fetched")
+    //     reject("internet error")
+    // })
 
-    console.log(promise);
+    // console.log(promise);
+
+
+
+
+    // function getdata(id) {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             console.log("data " + id + " fetched")
+    //             // resolve("success");
+    //             reject("internet error")
+    //         }, 5000)
+    //     })
+    // }
+
+
+    // let p = getdata(101);
+
+
+
+
+
+    function getdata(id) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("data " + id + " fetched")
+                // resolve("success");
+                reject("internet error")
+            }, 5000)
+        })
+    }
+
+
+    let p = getdata(101);
+
+    p.then((res) => {
+        console.log(res)
+    })
+
+
+    p.catch((res) => {
+        console.log(res)
+    })
+
+
 </script>

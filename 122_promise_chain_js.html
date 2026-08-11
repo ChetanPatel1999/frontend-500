@@ -1,0 +1,42 @@
+<!-- promise chain :-   -->
+<script>
+    
+    function getdata(id) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("data " + id + " fatched")
+                resolve("success");
+                // reject("internet error")
+            }, 2000)
+        })
+    }
+
+
+    // console.log("data1 is getting...")
+    // getdata(101).then((res) => {
+    //     console.log("data2 is getting...")
+    //     getdata(102).then((res) => {
+    //         console.log("data3 is getting...")
+    //         getdata(103).then((res) => {
+    //             console.log("data4 is getting...")
+    //             getdata(104)
+    //         })
+    //     })
+    // })
+
+
+
+    getdata(101)
+        .then((res) => {
+            return getdata(102)
+        })
+        .then((res) => {
+            return getdata(103)
+        })
+        .then((res) => {
+            return getdata(104)
+        })
+        .then((res) => {
+            return getdata(105)
+        })
+</script>
