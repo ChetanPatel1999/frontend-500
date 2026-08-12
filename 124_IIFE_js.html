@@ -1,0 +1,81 @@
+<!-- 
+IIFE : Immediately Invoked Function Expression
+IIFE is a function that is called immediately as soon as it is defined.
+
+(function (){
+//code
+}
+)();
+ 
+( () => {
+//code
+}
+)();
+
+(async function (){
+//code
+}
+)();
+
+(async ()=>{
+//code
+}
+)();
+-->
+
+<script>
+    function WeatherApi1() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("weather data 101 fatched")
+                resolve(200)
+            }, 2000)
+        })
+    }
+    function WeatherApi2() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("weather data 102 fatched")
+                resolve(200)
+            }, 2000)
+        })
+    }
+    function WeatherApi3() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("weather data 103 fatched")
+                resolve(200)
+            }, 2000)
+        })
+    }
+
+    // async function getWatherData() {
+    //     console.log("getting data1 ....")
+    //     await WeatherApi1()
+    //     console.log("getting data2 ....")
+    //     await WeatherApi2()
+    //     console.log("getting data3 ....")
+    //     await WeatherApi3()
+    // }
+
+    //IIFE:-imidataly invoked  function expression
+
+    // (async function () {
+    //     console.log("getting data1 ....")
+    //     await WeatherApi1()
+    //     console.log("getting data2 ....")
+    //     await WeatherApi2()
+    //     console.log("getting data3 ....")
+    //     await WeatherApi3()
+    // })();
+
+    (async () => {
+        console.log("getting data1 ....")
+        await WeatherApi1()
+        console.log("getting data2 ....")
+        await WeatherApi2()
+        console.log("getting data3 ....")
+        await WeatherApi3()
+    })();
+
+</script>

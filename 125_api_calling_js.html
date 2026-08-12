@@ -1,0 +1,79 @@
+<!-- 
+fetch api :- the fetch api provides an interface for fetching(sending / receving ) resorcecs.
+
+it used  request and response object .
+
+the fetch()  method  is used to fetch a resorce(data).
+
+let promise = fetch(url , [option])
+
+
+Understanding Terms :- 
+
+AJAX   is  Asynchronous JS & XML
+
+JSON is javascript Object Notation
+
+json() method :- returns a second promise that resolve with the result of parsing the 
+                 response body text as JSON(input is json output is JS object ) 
+
+Request & Response
+HTTP Verbs
+Response Status Code
+
+HTTP response headers also Contain details about the responses
+, such as content type , HTTP status code etc.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img id="image" src="" />
+    </div>
+    <button id="btn">get dog random image</button>
+    <script>
+        let btn = document.querySelector("#btn")
+        let image = document.querySelector("#image")
+        let url = "https://dog.ceo/api/breeds/image/random";
+
+        // async function getData() {
+        //     let promise = await fetch(url);
+        //     let data = await promise.json()
+        //     console.log(data)
+        //     image.src = data.message;
+        //     image.classList.add("img");
+        // }
+
+        function getData() {
+            fetch(url)
+                .then((response) => {
+                    return response.json();
+                })
+                .then((data) => {
+                    console.log(data)
+                    image.src = data.message;
+                    image.classList.add("img");
+                })
+        }
+
+
+        btn.addEventListener("click", getData)
+
+    </script>
+</body>
+
+</html>
