@@ -18,6 +18,72 @@
 </head>
 
 <body>
+    <!--Demo Now Modal -->
+    <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Demo Now</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class=" p-1 rounded-3">
+                        <h3 class="fs-5 fw-bold">Book your Free Class Now!</h3>
+                        <p>2 days of free demo classes without paying in advance!</p>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Name</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Phone</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">+91</span>
+                                <input type="text" class="form-control" placeholder="Phone" aria-label="Username"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <button class="w-100 btn my-btn">Register Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Enquery Modal -->
+    <div class="modal fade" id="enquireModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Enquire Now</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class=" p-1 rounded-3">
+                        <h3 class="fs-5 fw-bold">Book your Free Class Now!</h3>
+                        <p>2 days of free demo classes without paying in advance!</p>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Name</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Phone</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">+91</span>
+                                <input type="text" class="form-control" placeholder="Phone" aria-label="Username"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <button class="w-100 btn my-btn">Register Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- header section -->
     <header class="container-fluid header shadow-lg">
         <div class="container">
@@ -53,8 +119,10 @@
                             </li>
                         </ul>
                         <div class="d-flex gap-3">
-                            <button class="w-50 btn my-btn">Book 2 Days Demo</button>
-                            <button class="w-50 btn bt btn-outline-dark"><i class="fa-solid fa-download"></i>Download
+                            <button class="w-50 btn my-btn" data-bs-toggle="modal" data-bs-target="#demoModal"> Book 2
+                                Days Demo</button>
+                            <button class="w-50 btn bt btn-outline-dark" data-bs-toggle="modal"
+                                data-bs-target="#enquireModal"><i class="fa-solid fa-download"></i>Download
                                 Curriculum</button>
                         </div>
                     </div>
@@ -110,7 +178,101 @@
             </div>
         </div>
     </section>
-    <script src="css/bootstrap.bundle.min.js"></script>
+    <!-- highlight-section -->
+    <section class="container-fluid highlight-section py-5">
+        <div class="container ">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="fw-bolder">Key Highlights of the Course</h1>
+                    <p class="para">Key Highlights of the IT Course: Practical projects, modern tools, career-focused
+                        training, and
+                        strong industry-ready skills.</p>
+                </div>
+            </div>
+            <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-4 mt-1">
+                <div class="col">
+                    <div class="bg-white shadow-lg d-flex rounded-3 p-2 gap-4">
+                        <div class="bg-primary-subtle d-flex justify-content-center align-items-center rounded-3 p-3">
+                            <i class="fs-1 my-text fa-solid fa-clipboard-list"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold fs-5">Assignments &<br>
+                                Modules tests</h4>
+                            <p class="cpara">Test Your knowledge</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bg-white shadow-lg d-flex rounded-3 p-2 gap-4">
+                        <div class="bg-primary-subtle d-flex justify-content-center align-items-center rounded-3 p-3">
+                            <i class="fs-1 my-text fa-solid fa-certificate"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold fs-5">Industry-recongnized<br>
+                                Certificate</h4>
+                            <p class="cpara">Stand out to your professional</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bg-white shadow-lg d-flex rounded-3 p-2 gap-4">
+                        <div class="bg-primary-subtle d-flex justify-content-center align-items-center rounded-3 p-3">
+                            <i class="fa-solid fa-video fs-1 my-text"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold fs-5">Live Classes &<br>
+                                Recorded Lectures</h4>
+                            <p class="cpara">Best of Both Words Of learning</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bg-white shadow-lg d-flex rounded-3 p-2 gap-4">
+                        <div class="bg-primary-subtle d-flex justify-content-center align-items-center rounded-3 p-3">
+                            <i class="fa-solid fa-download fs-1 my-text"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold fs-5">Downloadable<br>
+                                Content</h4>
+                            <p class="cpara">With lifetime accecss</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bg-white shadow-lg d-flex rounded-3 p-2 gap-4">
+                        <div class="bg-primary-subtle d-flex justify-content-center align-items-center rounded-3 p-3">
+                            <i class="fa-solid fa-list-check fs-1 my-text"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold fs-5">6 Industry Level<br>
+                                Projects</h4>
+                            <p class="cpara">Get practical skills</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="bg-white shadow-lg d-flex rounded-3 p-2 gap-4">
+                        <div class="bg-primary-subtle d-flex justify-content-center align-items-center rounded-3 p-3">
+                            <i class="fa-solid fa-comment-dots fs-1 my-text"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold fs-5">4 Live Doubt Clearing<br>
+                                Session</h4>
+                            <p class="cpara">Gain a clear understatnding</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 d-flex justify-content-center ">
+                    <button class="btn my-btn" data-bs-toggle="modal" data-bs-target="#demoModal">Book Free
+                        Class</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src=" css/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
