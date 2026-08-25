@@ -39,9 +39,19 @@
 .highlight-section {
     background-color: rgb(240, 250, 255);
 }
-.highlight-section .para{
+
+.highlight-section .para {
     font-size: 18px;
 }
-.highlight-section .cpara{
+
+.highlight-section .cpara {
     font-size: 12px;
+}
+
+.certified-section {
+    background-color: rgb(240, 250, 255);
+}
+
+.Curriculum-section ul {
+    list-style: none;
 }
