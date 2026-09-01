@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <button id="btn">Click Me</button>
+    <p id="para">this is ravi</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        let a = 12;
+        let b = 40
+        let c = a + b
+        $("#btn").click(() => { $("#para").html(`sum = ${c}`); })
+    </script>
+</body>
+
+</html>

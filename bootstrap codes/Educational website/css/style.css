@@ -59,3 +59,25 @@
 .accordian-section {
     background-color: rgb(240, 250, 255);
 }
+
+.company-section img {
+    width: 150px;
+}
+
+footer h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+footer p {
+    font-size: 15px;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: 15px;
+}
+
+footer i {
+    font-size: 22px;
+}
