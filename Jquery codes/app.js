@@ -204,9 +204,75 @@ $(document).ready(function () {
   //   })
   // })
 
-  $("#btn").click(function () {
-    $("#box").animate({
-      height: 'toggle'
-    });
-  });
+  // $("#btn").click(function () {
+  //   $("#box").animate({
+  //     // height: 'toggle',
+  //     width: 'toggle',
+  //   });
+  // });
+
+
+  // $("#btn").click(() => {
+  //   let d = $("#box")
+  //   d.animate({ height: '300px', opacity: '0.4' }, "slow");
+  //   d.animate({ width: '300px', opacity: '0.8' }, "slow");
+  //   d.animate({ height: '100px', opacity: '0.4' }, "slow");
+  //   d.animate({ width: '100px', opacity: '0.8' }, "slow");
+  // })
+
+  // $("button").click(function () {
+  //   var div = $("div");
+  //   div.animate({ marginLeft: '100px' }, "slow");
+  //   div.animate({ fontSize: '50px' }, "slow");
+  // });
+
+
+  //stop() :- its stop animation and affect
+
+
+  // $("#btn").click(function () {
+  //   $("#box").slideToggle(4000);
+  // });
+
+  // $("#stop").click(function () {
+  //   $("#box").stop(false, false)
+  // });
+
+  // $("#btn").click(function () {
+  //   $("#box").css("backgroundColor", "blue").fadeTo(1000,0.5).slideUp(2000);
+  // });
+
+
+  // text() - Sets or returns the text content of selected elements
+  // html() - Sets or returns the content of selected elements(including HTML markup)
+  // val() - Sets or returns the value of form fields
+
+  // $("#btn").click(function (e) {
+  //   let data = $("#head").text()
+  //   $("#para").text(data)
+  // });
+
+
+  //make counter
+  // $("#btn").click(function (e) {
+  //   $("#head").text(Number($("#head").text()) + 1)
+  // });
+
+  // $("#btn").click(function (e) {
+  //   $("#head").html(Number($("#head").html()) + 1)
+  // });
+
+
+  // $("#btn").click(function (e) {
+  //   let data = $("#box").html()
+  //   console.log(data)
+  // });
+
+  // $("button").click(function (e) {
+  //   let d = $("input").val()
+  //   $("h1").text(d)
+  //   $("input").val("")
+  // });
+
+
 });
