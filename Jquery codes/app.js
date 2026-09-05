@@ -275,4 +275,73 @@ $(document).ready(function () {
   // });
 
 
+  //how to create new html element in jquery
+  //how to insert in html page
+  // $("#mybt").click(function (e) {
+  //   // $("div").append("hello div");
+  //   // $("div").prepend("hello div");
+  //   // $("div").before("hello div");
+  //   // $("div").after("hello div");
+
+  //   // let btn = document.createElement("button");
+  //   // btn.innerText="new btn";
+
+  //   // let text = "<button> new btn </button>"
+
+  //   // let btn = $("<button></button>")
+  //   // btn.text("new btn");
+
+  //   // let btn = $("<button></button>").text("new btn");
+  //   // $("div").append(btn);
+  // });
+
+
+  //remove() - Removes the selected element (and its child elements)
+  // empty() - Removes the child elements from the selected element
+
+  // $("#mybt").click(function (e) {
+  //   // $("div").remove()
+  //   $("div").empty()
+  // });
+
+  // addClass() - Adds one or more classes to the selected elements
+  // removeClass() - Removes one or more classes from the selected elements
+  // toggleClass() - Toggles between adding/removing classes from the selected elements
+  // css() - Sets or returns the style attribute
+
+
+  // $("#mybt").click(function (e) {
+  //   // $("p").css("backgroundColor", "gray")
+  //   // $("p").css({
+  //   //   "background-color": "gray",
+  //   //   "padding": "10px",
+  //   //   "color": "white",
+  //   //   "font-weight": "900"
+  //   // })
+
+  //   // $("p").addClass("mycss")
+  //   // $("p").addClass("mycss cursive")
+
+  //   // $("p").removeClass("mycss")
+  //   // $("p").removeClass("mycss cursive")
+
+
+  //   // $("p").toggleClass("mycss cursive")
+
+  // });
+
+
+
+  $("#mybt").click(function (e) {
+    // let data = $("p").width()
+    // let data = $("p").height()
+    // console.log(data)
+    // $("p").height("200px")
+    // $("p").width("100px")
+
+    // console.log($("p").innerHeight())
+    // console.log($("p").outerHeight())
+    console.log($("p").outerHeight(true))
+  });
+
 });
